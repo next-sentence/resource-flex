@@ -69,3 +69,8 @@ services:
     App\Menu\AdminMenuBuilder:
         tags:
             - { name: knp_menu.menu_builder, method: createMenu, alias: admin_sidebar }
+
+    App\Provider\TranslationLocaleProvider:
+        arguments: ["@sylius.repository.locale", "%locale%"]
+
+    app.translation_locale_provider: '@App\Provider\TranslationLocaleProvider'

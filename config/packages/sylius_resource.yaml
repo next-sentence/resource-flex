@@ -4,8 +4,8 @@ sylius_resource:
         limit: 2
         allowed_paginate: true
         default_page_size: 2
-#    translation:
-#        locale_provider: app.translation_locale_provider
+    translation:
+        locale_provider: app.translation_locale_provider
 
 #    resources:
 #        app.avatar:
