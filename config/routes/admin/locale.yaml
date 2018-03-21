@@ -1,0 +1,65 @@
+#sylius_admin_locale:
+#    resource: |
+#        alias: sylius.locale
+#        section: admin
+#        except: ['show', 'delete']
+#        templates: 'admin'
+#        redirect: index
+#        grid: sylius_admin_locale
+#        permission: true
+#        vars:
+#            all:
+#                subheader: sylius.ui.manage_languages_available_in_the_store
+#                templates:
+#                    form: admin/locale/_form.html.twig
+#            index:
+#                icon: translate
+#    type: sylius.resource
+
+sylius_admin_locale_index:
+    path: /locales/
+    methods: [GET]
+    defaults:
+        _controller: sylius.controller.locale:indexAction
+        _sylius:
+            template: admin/crud/index.html.twig
+            grid: sylius_admin_locale
+            section: admin
+#            sortable: true
+            permission: true
+            vars:
+                all:
+                    subheader: sylius.ui.manage_languages_available_in_the_store
+                    templates:
+                        form: admin/locale/_form.html.twig
+
+sylius_admin_locale_create:
+    path: /locales/new
+    methods: [GET, POST]
+    defaults:
+        _controller: sylius.controller.locale:createAction
+        _sylius:
+            template: admin/crud/create.html.twig
+            redirect: sylius_admin_locale_index
+            section: admin
+            permission: true
+            vars:
+                all:
+                    subheader: sylius.ui.manage_languages_available_in_the_store
+                    templates:
+                        form: admin/locale/_form.html.twig
+sylius_admin_locale_update:
+    path: /locales/{id}/edit
+    methods: [GET, PUT, POST]
+    defaults:
+        _controller: sylius.controller.locale:updateAction
+        _sylius:
+            template: admin/crud:update.html.twig
+            redirect: sylius_admin_locale_index
+            section: admin
+            permission: true
+            vars:
+                all:
+                    subheader: sylius.ui.manage_languages_available_in_the_store
+                    templates:
+                        form: admin/locale/_form.html.twig

@@ -1,0 +1,3 @@
+imports:
+    - { resource: './admin/admin_user.yaml' }
+    - { resource: './admin/locale.yaml' }

@@ -1,0 +1,8 @@
+sylius_mailer:
+    sender:
+        name: My website
+        address: pekya_1992@yahoo.com
+#    emails:
+#        contact_request:
+#            subject: sylius.emails.contact_request.subject
+#            template: "Email/contactRequest.html.twig"

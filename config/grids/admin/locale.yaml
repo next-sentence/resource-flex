@@ -1,0 +1,32 @@
+sylius_grid:
+    grids:
+        sylius_admin_locale:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: Sylius\Component\Locale\Model\Locale
+            sorting:
+                code: asc
+            fields:
+                code:
+                    type: string
+                    label: sylius.ui.code
+                    sortable: ~
+                name:
+                    type: twig
+                    label: sylius.ui.name
+                    path: .
+                    sortable: code
+                    options:
+                        template: "admin/locale/grid/field/name.html.twig"
+            filters:
+                code:
+                    type: string
+                    label: sylius.ui.code
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update

@@ -1,0 +1,96 @@
+{
+  "type": "project",
+  "license": "proprietary",
+  "require": {
+    "php": "^7.1.3",
+    "ext-iconv": "*",
+    "ocramius/proxy-manager": "^2.1",
+    "sensio/framework-extra-bundle": "^5.1",
+    "sylius-labs/sensio-distribution-bundle": "^6.0",
+    "sylius/grid-bundle": "^1.1",
+    "sylius/locale-bundle": "^1.1",
+    "sylius/currency-bundle": "^1.1",
+    "sylius/money-bundle": "^1.1",
+    "sylius/fixtures-bundle": "^1.1",
+    "sylius/resource-bundle": "^1.1",
+    "sylius/user-bundle": "^1.1",
+    "sylius/ui-bundle": "^1.1",
+    "symfony/asset": "^3.4",
+    "symfony/console": "^3.4",
+    "symfony/debug-pack": "*",
+    "symfony/expression-language": "^3.4",
+    "symfony/flex": "^1.0",
+    "symfony/form": "^3.4",
+    "symfony/framework-bundle": "^3.4",
+    "symfony/lts": "^3-dev",
+    "symfony/monolog-bundle": "^3.1",
+    "symfony/orm-pack": "*",
+    "symfony/process": "^3.4",
+    "symfony/security-bundle": "^3.4",
+    "symfony/serializer-pack": "*",
+    "symfony/swiftmailer-bundle": "^3.1",
+    "symfony/validator": "^3.4",
+    "symfony/web-link": "^3.4",
+    "symfony/webpack-encore-pack": "*",
+    "symfony/yaml": "^3.4",
+    "symfony/templating": "^3.4",
+    "fzaninotto/faker": "^1.6"
+  },
+  "require-dev": {
+    "akeneo/phpspec-skip-example-extension": "3.0",
+    "phpspec/phpspec": "^4.3",
+    "symfony/browser-kit": "^3.4",
+    "symfony/css-selector": "^3.4",
+    "symfony/dotenv": "^3.4",
+    "symfony/maker-bundle": "^1.0",
+    "symfony/phpunit-bridge": "^3.4",
+    "symfony/profiler-pack": "*",
+    "symfony/web-server-bundle": "^3.4"
+  },
+  "config": {
+    "preferred-install": {
+      "*": "dist"
+    },
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "App\\Tests\\": "tests/"
+    }
+  },
+  "replace": {
+    "symfony/polyfill-iconv": "*",
+    "symfony/polyfill-php71": "*",
+    "symfony/polyfill-php70": "*",
+    "symfony/polyfill-php56": "*"
+  },
+  "scripts": {
+    "auto-scripts": {
+      "cache:clear": "symfony-cmd",
+      "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd",
+      "security-checker security:check": "script"
+    },
+    "post-install-cmd": [
+      "@auto-scripts"
+    ],
+    "post-update-cmd": [
+      "@auto-scripts"
+    ]
+  },
+  "conflict": {
+    "symfony/symfony": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "symfony": {
+      "id": "01C8FQG0V5Z7EXVMKWEY197EZ1",
+      "allow-contrib": true
+    }
+  }
+}

@@ -1,0 +1,45 @@
+sylius_fixtures:
+    suites:
+        default:
+            listeners:
+                orm_purger: ~
+                logger: ~
+
+            fixtures:
+                locale: ~
+                currency:
+                    options:
+                        currencies: ['USD']
+
+#                regular_user:
+#                    name: "regular_user"
+#                    options:
+#                        random: 20
+#                        custom:
+#                            -
+#                                email: "shop@example.com"
+#                                first_name: "John"
+#                                last_name: "Doe"
+#                                password: "sylius"
+
+                admin_user:
+                    name: "admin_user"
+                    options:
+                        custom:
+                            -
+                                email: "admin@example.com"
+                                username: "admin"
+                                password: "adminpass"
+                                enabled: true
+                                locale_code: "%locale%"
+#                                first_name: "John"
+#                                last_name: "Doe"
+                            -
+                                email: "api@example.com"
+                                username: "api"
+                                password: "sylius-api"
+                                enabled: true
+                                locale_code: "%locale%"
+#                                first_name: "Luke"
+#                                last_name: "Brushwood"
+                                api: true
