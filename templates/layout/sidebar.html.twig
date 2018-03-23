@@ -2,8 +2,7 @@
 
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('build/css/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('build/css/semantic.css') }}">
+    <link rel="stylesheet" href="{{ asset('build/vendor.css') }}" />
 {% endblock %}
 
 {% block topbar %}
@@ -48,6 +47,8 @@
 {% endblock %}
 
 {% block javascripts %}
-    {#<script src="{{ asset('build/js/app.js') }}"></script>#}
+    <script src="{{ asset('build/manifest.js') }}"></script>
+    <script src="{{ asset('build/vendor.js') }}"></script>
 
+    <script src="{{ asset('build/js/app.js') }}"></script>
 {% endblock %}

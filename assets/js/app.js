@@ -40,5 +40,9 @@ var $ = require('jquery');
 
         $('[data-form-type="collection"]').CollectionForm();
 
+        $('.pusher')
+            .transition('fly right in')
+        ;
+
     });
 })(jQuery);

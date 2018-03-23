@@ -74,8 +74,12 @@ th {
   }
 }
 
-.ui.fixed.inverted.menu {
-  //background-color: $header-background;
+.ui.inverted.menu {
+  background-color: #292f43;
+}
+
+.ui.vertical.menu .header {
+  color: #7cc576;
 }
 
 .ui.compact.segment .inline.fields {
